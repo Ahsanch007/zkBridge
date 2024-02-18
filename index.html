@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="menu">
+            <div class="hamburger">
+                <a onclick="myFunction()"><img src="assets/img/mobile-menu-btn-4ceb23d5.svg" alt=""></a>
+            </div>
+            <div class="logo">
+                <img src="assets/img/logo-with-text-f49ddb53.svg" alt="">
+            </div>
+            <nav class="topnav" id="myTopnav">
+                <a href="">Token</a>
+                <a href="">NFT</a>
+                <a href="">Msg</a>
+                <a href="">opBNB</a>
+                <a href="">Developers</a>
+                <a href="">Ecosystem</a>
+            </nav>
+        </div>
+        <div class="header_button">
+            <button class="">Connect</button>
+        </div>
+    </div>
+    <div class="hero-section">
+        <video autoplay loop muted id="h-video" src="assets/img/video-pc-homepage.mp4"></video>
+        <div class="hero-content">
+            <h1 class="py-2">Trustless Cross-chain Bridges <br> Made Practical</h1>
+            <p>The first trustless, efficient, and secure <br> cross-chain interoperability protocol with zero-knowledge
+                proofs</p>
+            <div class="hero-b pt-2">
+                <div class="hero-button">
+                    <button>Token zkBridge</button>
+                </div>
+                <div class="hero-button1">
+                    <button>NFT zkBridge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zkbridge-protocol">
+        <h1>Introducing zkBridge Protocol</h1>
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p>zkBridge uses zkSNARKs to enable a prover to efficiently convince the receiver chain that a
+                        certain state transition happened on the sender chain. zkBridge consists of a block header relay
+                        network and an updater contract.</p>
+                    <p>The block header relay network retrieves the block headers from the sender chain, generates
+                        proofs of the validity of the block headers, and sends the headers along with the proofs to the
+                        updater contract (set up on the receiver chain).</p>
+                    <p>The updater contract maintains a light-client state. It automatically adds block headers of the
+                        sender chain once the associated proofs are verified, and updates the current main chain of the
+                        sender chain.</p>
+                    <div class="row pt-5">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <a href="">zkBridge Tech Paper</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <a href="">Read Docs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="assets/img/protocol-img-b07583a2.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zkLightClient">
+        <h1>zkLightClient on LayerZero</h1>
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="assets/img/home_layerzero-bg-e8b84d4c.gif" alt="">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p>zkLightClient is fully integrated with LayerZero's messaging protocol. Application developers can
+                        easily build cross-chain applications on top of LayerZero through its extensive developer
+                        tooling and community support.</p>
+                    <p>zklightClient uses zkSNARKs to convince the receiver chain that a certain state transition
+                        happened on the sender chain. In conjunction with LayerZero’s libraries, zkLightClient add layer
+                        of security on top of the LayerZero messaging protocol.</p>
+                    <p>zkLightClient, build on LayerZero, reduces the on-chain verification with lower latency through
+                        efficient ZKP protocols. In addition, multiple transaction verifications can be batched into a
+                        single zero-knowledge proof.</p>
+                    <div class="row pt-5">
+                        <div class="col-6">
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="advantages">
+        <h1>Advantages</h1>
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="float-left">
+                        <img src="assets/img/advantages1-13c4c8bf.svg" alt="">
+                        <h2>Trust and Secure The Process</h2>
+                        <p>zkSNARKs proof the correctness of state transitions on remote blockchains, eliminating
+                            external trust assumptions. We build together with LayerZero for the ultimate security
+                            solution for interoperability.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="float-left">
+                        <img src="assets/img/advantages2-06f5a4f5.svg" alt="">
+                        <h2>Efficient</h2>
+                        <p>We design and implement deVirgo proof system to significantly accelerate the proof
+                            generation. The cross-chain messages can be quickly finalized once the proof is verified,
+                            supporting fast processing of remote blockchain information.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="float-left">
+                        <img src="assets/img/Group3413-58d3fe42.svg" alt="">
+                        <h2>Cost Reduction</h2>
+                        <p>Harnesses the compression of zero-knowledge proofs, the on-chain verification can be reduced
+                            tremendously. In addition, multiple transaction verifications can be batched into a single
+                            zero-knowledge proof.</p>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="float-left">
+                        <img src="assets/img/Group3407-f849a71b.svg" alt="">
+                        <h2>Developers-Friendly</h2>
+                        <p>Fully integrated with LayerZero, developers can use zero-knowledge proof technology without
+                            barriers. They can easily build cross-chain applications on LayerZero through its extensive
+                            developer tooling and community support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="current-support">
+        <div class="py-5">
+            <h1>Current Supported Networks</h1>
+        </div>
+        <div class="container">
+            <div class="currency-ico">
+                <img src="assets/img/currency-ico/bitcoin-e39dfd14.svg">
+                <img src="assets/img/currency-ico/ethernet-3b0460d7.png">
+                <img src="assets/img/currency-ico/binance-f89f61cf.png">
+                <img src="assets/img/currency-ico/opbnb-logo-916b2eb3.png">
+                <img src="assets/img/currency-ico/Polygon-c15a35f2.png">
+                <img src="assets/img/currency-ico/arbitrum-3ed8635f.png">
+                <img src="assets/img/currency-ico/Avalanche-0e7d998f.png">
+                <img src="assets/img/currency-ico/Fantom-02432399.png">
+                <img src="assets/img/currency-ico/linea-4bef6c46.png">
+                <img src="assets/img/currency-ico/core-dao-chain-36420390.png">
+                <img src="assets/img/currency-ico/celo-2e499d1f.png">
+                <img src="assets/img/currency-ico/arbitrum-nova-f7cdd7fd.svg">
+                <img src="assets/img/currency-ico/optimism-a4b9234e.png">
+                <img src="assets/img/currency-ico/combo-b8c22b87.png">
+                <img src="assets/img/currency-ico/metis-28effc7c.svg">
+                <img src="assets/img/currency-ico/gnosis-67cd72fa.svg">
+                <img src="assets/img/currency-ico/Moonbeam-6d1cd1ad.png">
+                <img src="assets/img/currency-ico/taiko-logo-50fa9ba0.png">
+                <img src="assets/img/currency-ico/mantle-76507b1c.png">
+                <img src="assets/img/currency-ico/chain-scroll-008418d3.png">
+                <img src="assets/img/currency-ico/chain-base-33c10ab5.png">
+                <img src="assets/img/currency-ico/chain-manta-148407b5.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="ecosystem">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h1>Ecosystem</h1>
+                </div>
+                <div class="col-6">
+                    <h5 class="float-end"><a href="">View More</a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="carousel-container py-2">
+                <div class="my-carousel-inner">
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/BNB_Chain-e09a26d1.png" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/LayerZero-9c1dd03e.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="/assets/Animoca_Brands-f58a3e22.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Linea-f3c65cba.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Nodereal-96df6f94.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Combo-0e6d9867.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Mantle-6aa0ac56.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/fantom-b11a5538.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Galxe-8556a97c.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Core_DAO-53411370.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/OMA3-5cfb8a5e.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/BNB_Chain-e09a26d1.png" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/LayerZero-9c1dd03e.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Animoca_Brands-f58a3e22.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Linea-f3c65cba.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Nodereal-96df6f94.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Combo-0e6d9867.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Mantle-6aa0ac56.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/fantom-b11a5538.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Galxe-8556a97c.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Core_DAO-53411370.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/OMA3-5cfb8a5e.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-container2  py-2  float-end">
+                <div class="my-carousel-inner2">
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/BNB_Chain-e09a26d1.png" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/LayerZero-9c1dd03e.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="/assets/Animoca_Brands-f58a3e22.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Linea-f3c65cba.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Nodereal-96df6f94.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Combo-0e6d9867.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Mantle-6aa0ac56.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/fantom-b11a5538.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Galxe-8556a97c.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Core_DAO-53411370.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/OMA3-5cfb8a5e.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/BNB_Chain-e09a26d1.png" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/LayerZero-9c1dd03e.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Animoca_Brands-f58a3e22.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Linea-f3c65cba.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Nodereal-96df6f94.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Combo-0e6d9867.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Mantle-6aa0ac56.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/fantom-b11a5538.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Galxe-8556a97c.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Core_DAO-53411370.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/OMA3-5cfb8a5e.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-container py-2">
+                <div class="my-carousel-inner">
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/BNB_Chain-e09a26d1.png" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/LayerZero-9c1dd03e.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="/assets/Animoca_Brands-f58a3e22.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Linea-f3c65cba.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Nodereal-96df6f94.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Combo-0e6d9867.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Mantle-6aa0ac56.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/fantom-b11a5538.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Galxe-8556a97c.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Core_DAO-53411370.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/OMA3-5cfb8a5e.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/BNB_Chain-e09a26d1.png" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/LayerZero-9c1dd03e.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Animoca_Brands-f58a3e22.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Linea-f3c65cba.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Nodereal-96df6f94.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Combo-0e6d9867.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Mantle-6aa0ac56.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/fantom-b11a5538.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Galxe-8556a97c.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Core_DAO-53411370.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/OMA3-5cfb8a5e.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-container2 py-2 float-end">
+                <div class="my-carousel-inner2">
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/BNB_Chain-e09a26d1.png" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/LayerZero-9c1dd03e.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="/assets/Animoca_Brands-f58a3e22.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Linea-f3c65cba.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Nodereal-96df6f94.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Combo-0e6d9867.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Mantle-6aa0ac56.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/fantom-b11a5538.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Galxe-8556a97c.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Core_DAO-53411370.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/OMA3-5cfb8a5e.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/BNB_Chain-e09a26d1.png" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/LayerZero-9c1dd03e.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Animoca_Brands-f58a3e22.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Linea-f3c65cba.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Nodereal-96df6f94.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Combo-0e6d9867.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Mantle-6aa0ac56.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/fantom-b11a5538.png" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Galxe-8556a97c.jpeg" alt=""></div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/Core_DAO-53411370.jpeg" alt="">
+                    </div>
+                    <div><img class="img" src="assets/img/currency-ico/eco-row1/OMA3-5cfb8a5e.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="proving-ethereum">
+        <h1>Proving Ethereum Full Consensus in ZK</h1>
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p>zkLightClient is fully integrated with LayerZero's messaging protocol. Application developers can
+                        easily build cross-chain applications on top of LayerZero through its extensive developer
+                        tooling and community support.</p>
+                    <p>zklightClient uses zkSNARKs to convince the receiver chain that a certain state transition
+                        happened on the sender chain. In conjunction with LayerZero’s libraries, zkLightClient add layer
+                        of security on top of the LayerZero messaging protocol.</p>
+                    <p>zkLightClient, build on LayerZero, reduces the on-chain verification with lower latency through
+                        efficient ZKP protocols. In addition, multiple transaction verifications can be batched into a
+                        single zero-knowledge proof.</p>
+                    <div class="row pt-5">
+                        <div class="col-6">
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <video autoplay loop muted playsinline src="assets/img/zk-5e6b59bd.mp4" alt=""></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="efficient-proof">
+        <h1>Efficient Proof System</h1>
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="assets/img/home-proof-bg-a6b3ca46.svg" alt="">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p>zkLightClient is fully integrated with LayerZero's messaging protocol. Application developers can
+                        easily build cross-chain applications on top of LayerZero through its extensive developer
+                        tooling and community support.</p>
+                    <p>zklightClient uses zkSNARKs to convince the receiver chain that a certain state transition
+                        happened on the sender chain. In conjunction with LayerZero’s libraries, zkLightClient add layer
+                        of security on top of the LayerZero messaging protocol.</p>
+                    <p>zkLightClient, build on LayerZero, reduces the on-chain verification with lower latency through
+                        efficient ZKP protocols. In addition, multiple transaction verifications can be batched into a
+                        single zero-knowledge proof.</p>
+                    <div class="row pt-5">
+                        <div class="col-6">
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="application-use">
+        <div class="heading">
+            <h1>Application Use Cases</h1>
+        </div>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 p-1 chain1">
+                    <img src="assets/img/cross-chain-1-d15f51c3.svg" alt="">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 p-1 chain2">
+                    <img src="assets/img/cross-chain-defi-add4fb99.svg" alt="">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 p-1 chain3">
+                    <img src="assets/img/cross-chain-gamefi-f3fadf4c.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h2>Cross-chain data availability</h2>
+                    <p>Allow multiple blockchain networks to access, share, and verify data in a secure and efficient
+                        manner. This interoperability enhances the overall functionality and efficiency of the
+                        blockchain ecosystem with seamless communication, data transfers, and collaboration among the
+                        systems.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h2>Cross-chain data availability</h2>
+                    <p>Allow multiple blockchain networks to access, share, and verify data in a secure and efficient
+                        manner. This interoperability enhances the overall functionality and efficiency of the
+                        blockchain ecosystem with seamless communication, data transfers, and collaboration among the
+                        systems.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h2>Cross-chain data availability</h2>
+                    <p>Allow multiple blockchain networks to access, share, and verify data in a secure and efficient
+                        manner. This interoperability enhances the overall functionality and efficiency of the
+                        blockchain ecosystem with seamless communication, data transfers, and collaboration among the
+                        systems.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="build-zkBridge pt-5">
+        <div class="heading">
+            <h1 class="text-center">Build with zkBridge</h1>
+        </div>
+        <div class="p">
+            <p>Build a fully trustless, efficient, and secure foundation of Web3 interopearbility with zkBridge</p>
+        </div>
+        <div>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="assets/img/logo-with-text-f49ddb53.svg" alt="">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 float-middle">
+                    <h6>support@zkbridge.com</h6>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="icons">
+                        <img src="assets/img/socials/twitter-b134d0c2.svg" alt="">
+                        <img src="assets/img/socials/medium-2e991ffc.svg" alt="">
+                        <img src="assets/img/socials/gitbook-c75221dc.svg" alt="">
+                        <img src="assets/img/socials/discord-4eacd991.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="assets/img/polyhedra-long-logo-9962b615.svg" alt="">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 float-middle">
+                    <p>© 2023 zkBridge.com. All rights reserved</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="links">
+                        <a href="">Terms of Use</a>
+                        <a href="">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</html>
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        // alert(x);
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
