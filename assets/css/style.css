@@ -15,7 +15,18 @@ body {
     justify-content: space-between;
     padding: 21px;
     /* background-color: black; */
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    top: 0px;
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, 0.2);
 }
+
 
 .menu {
     display: flex;
@@ -36,11 +47,20 @@ body {
     height: auto;
 }
 
+/* Your existing styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 nav {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 2.3rem;
+}
+
+nav li {
+    display: inline-block;
 }
 
 nav a {
@@ -51,21 +71,247 @@ nav a {
     text-decoration: none;
     background-color: transparent;
     font-weight: 500;
+    transition: .3s;
+    position: relative;
+    padding: 30px 15px; /* Add padding to the list items */
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: rgb(12, 255, 167);
+    bottom: -5px; /* Adjust the distance from the text */
+    left: 0;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Add styles for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 270px;
+    padding: 14px 16px;
+    margin-top: 14px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    top: 41px;
+}
+
+.dropdown-content li {
+    display: block;
+    padding: 18px 20px;
+}
+.dropdown-content li a{
+    width: 100%;
+    color: #bebcbc;
+    padding: 0px;
+}
+
+.dropdown-content li:hover{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a::after{
+    background-color: transparent;
 
 }
 
-.header_button button {
-    background-color: white;
-    padding: 8px 15px;
-    border-radius: 50px;
-    border-radius: 12.8vw;
+
+
+
+
+
+.light-opactiy {
+    position: relative;
+}
+.light-opactiy{
+    width: 100%;
+    min-height: 320px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.05);
+    border-radius: 16px;
+    padding: 32px 28px 0;
+}
+
+.light-opactiy h2{
+    padding: 24px 0 16px;
+    box-sizing: border-box;
     font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+}
+.light-opactiy p{
+    font-size: 16px;
+    line-height: 160%;
+    color: #ffffff80;
+}
+
+.light-opactiy::after{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 500px;
+    height: 300px;
+    background: linear-gradient(89.79deg,#0cfff0 .18%,#0cffa7 99.9%);
+    opacity: .2;
+    filter: blur(250px);
+    left: -180px;
+    top: -146px;
+    z-index: 1;
+}
+
+.light-opactiy2 {
+    position: relative;
+}
+.light-opactiy2{
+    width: 100%;
+    min-height: 320px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.05);
+    border-radius: 16px;
+    padding: 32px 28px 0;
+}
+
+.light-opactiy2 h2{
+    padding: 24px 0 16px;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+}
+.light-opactiy2 p{
+    font-size: 16px;
+    line-height: 160%;
+    color: #ffffff80;
+}
+
+
+.moree {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    border-radius: 40px;
+    border: 1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.05);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    display: inline-flex;
+    height: 44px;
+    width: 130px;
+    justify-content: center;
+    align-items: center;
+}
+.wrap-bg{
+        border-radius: 24px;
+        border: 1px solid rgba(255,255,255,.1);
+        background: #000;
+}
+
+.desc-img{
+    width: 600px;
+    position: relative;
+}
+ .desc-img:before {
+    display: block;
+    z-index: 2;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(180deg,rgba(12,255,167,.08) 0%,rgba(255,255,255,0) 100%);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 16px;
+}
+
+.cardd{
+    height: 620px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cardd img{
+    width: 100%;
+}
+
+.card-content{
+    padding: 28px;
+}
+.card-content h2{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.card-content p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.5);
+}
+
+
+
+
+
+.c-vTNff-ijrxMAx-css {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    background: linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
+    border-radius: 4px;
+    padding: 3px 5px;
+    color: rgb(0, 0, 0);
+    margin-left: 4px;
+}
+
+.header_button button {
+    height: 44px;
+    border-radius: 48px;
+    font-size: 16px;
+    font-weight: 600;
     line-height: 1;
     border: 1px solid rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    color: black;
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 191px;
+
+}
+.header_button button:hover{
+    background: linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
+    color: rgb(13, 15, 14);
+    border: none;
+    transition: .3s;
+
+}
+.hero-section{
+    padding-top: 85px;
+    
 }
 
 .hero-section video {
@@ -81,7 +327,16 @@ nav a {
     color: white;
     width: 100%;
     background-color: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
+.hero-content h1{
+    text-align: center;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 .hero-content p {
@@ -105,18 +360,38 @@ nav a {
 }
 
 .hero-button button {
+    width: 366px;
+    height: 54px;
+    transition: all 0.3s ease-in-out 0s;
+    box-sizing: border-box;
     background: linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
-    color: black;
-    border-radius: 50px;
-    font-weight: 500;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 48px;
+    transition: .3s;
+}
+.hero-button button:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(89.79deg, rgb(12, 255, 240) 0.18%, rgb(12, 255, 167) 99.9%);
 }
 
 .hero-button1 button {
+    width: 366px;
+    height: 54px;
+    transition: all 0.3s ease-in-out 0s;
+    box-sizing: border-box;
     background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    border: 1px solid rgb(255, 255, 255);
     color: white;
-    border: 1px solid white;
-    border-radius: 50px;
-    font-weight: 500;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-button1 button:hover {
@@ -124,7 +399,8 @@ nav a {
     color: #0cffd3;
     border: 1px solid #0cffd3;
     border-radius: 50px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .zkbridge-protocol {
@@ -144,6 +420,39 @@ nav a {
     color: white;
     font-size: 17px;
 }
+
+.animated-img{
+    position: relative;
+    height: 460px;
+    width: 100%;
+}
+
+.animated-img::before{
+    display: block;
+    z-index: 2;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(180deg,rgba(12,255,167,.08) 0%,rgba(255,255,255,0) 100%);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 16px;
+}
+
+.animated-img:after {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url(../img/protocol-img-b07583a2.gif) no-repeat center;
+    background-size: contain;
+    mix-blend-mode: lighten;
+    border-radius: 15.04px;
+}
+
+
 
 .zkbridge-protocol h1 {
     text-align: center;
@@ -206,6 +515,10 @@ nav a {
     max-width: 100%;
     width: 80px;
     height: auto;
+}
+.tech-paper:hover{
+    color: #0cffd3;
+
 }
 
 .currency-ico {
@@ -337,12 +650,25 @@ nav a {
 .application-use p {
     color: #bebcbc;
 }
+.c-vTNff-icZXmfK-css {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #bebcbc;
+}
 
 .build-zkBridge {
-    color: white;
-    padding-top: 6rem;
-    text-align: center;
-    justify-content: center;
+   color: white;
+    padding-top: 115px;
+    padding-bottom: 140px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url('../img/join-partner-bg-a7a790f9.png') no-repeat center bottom;
+    background-size: 100% 100%;
 }
 
 .build-zkBridge p {
@@ -386,12 +712,13 @@ footer p {
 
 .icons {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: right;
+
 }
 
 .icons img {
-    width: 28px;
+    width: 9.6vw;
     height: auto;
 }
 
@@ -407,6 +734,17 @@ footer p {
     font-size: 15px;
 }
 
+.description p{
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #ffffffb3;
+}
+.mob-gap{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
 @media screen and (max-width:992px) {
     nav {
         display: none;
@@ -415,28 +753,26 @@ footer p {
     .hamburger {
         display: block;
     }
-
-    .responsive {
-        display: flex;
-        flex-direction: column;
-        justify-content: left !important;
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        top: 23%;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.849);
-        text-align: left !important;
+    .hero-content h1{
+        font-size: 10.6667vw
+    }
+    #h-video{
+        display: none;
+    }
+    .hero-content{
+        position: relative;
+    }
+    .hero-section{
+        background-image: url('../img/home-head-bg-dc1b9922.png');
+       background-size: contain;
+       margin-top: 85px;
+       padding-top: 0px;
+    }
+    .header_button button{
+        width:29.3333vw ;
     }
 
-    .responsive a {
-        width: 100%;
-        background-color: black;
-        font-size: 15px;
-        border-bottom: #0cffd2a8;
-        text-align: left;
-        margin-left: 3rem;
-    }
+
 
     .currency-ico {
         grid-template-columns: repeat(6, auto);
@@ -460,10 +796,97 @@ footer p {
         align-items: center;
         margin-bottom: 10rem !important;
     }
-
+    .desc-img{
+        width: 100%;
+        position: relative;
+    }
     .currency-ico {
         grid-template-columns: repeat(4, auto);
     }
+    .hero-button button{
+        width: 100%;
+    }
+    .hero-button1 button{
+        width: 100%;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .description p{
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 160%;
+        color: #ffffffb3;
+        text-align: center;
+    }
+    .zkLightClient h1{
+        margin-bottom: 60px;
+        font-size: 32px;
+        width: 80%;
+        margin: auto;
+    }
+    .centerrr{
+        justify-content: center;
+    }
+    .light-opactiy::after{
+        display: block;
+        position: absolute;
+        content: "";
+        width: 500px;
+        height: 300px;
+        background: transparent;
+        opacity: .2;
+        filter: blur(250px);
+        left: -180px;
+        top: -146px;
+        z-index: 1;
+    }
+    .light-opactiy{
+        min-height: 480px;
+        width: 280px;
+    }
+    .light-opactiy2{
+        min-height: 480px;
+        width: 280px;
+    }
+    #cardRow {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+        scrollbar-width: none; /* Hides scrollbar in Firefox */
+        -ms-overflow-style: none; /* Hides scrollbar in IE and Edge */
+    }
+
+    #cardRow::-webkit-scrollbar {
+        display: none; /* Hides scrollbar in WebKit browsers */
+    }
+
+    #cardRow > div {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px; /* Adjust as needed */
+    }
+    .efficient-proof h1{
+        font-size: 32px;
+        width: 80%;
+        margin: auto;
+    }
+    .application-use h1{
+        font-size: 32px;
+        width: 80%;
+        margin: auto;
+    }
+    .mob-gap{
+        gap: 30px;
+        border-bottom: none ;
+    }
+    .mob-hidden{
+        display: none !important;
+    }
+
 }
 
 @media screen and (max-width:568px) {
@@ -471,11 +894,7 @@ footer p {
         padding-top: 15rem !important;
     }
 
-    .chain1,
-    .chain2,
-    .chain3 {
-        display: none;
-    }
+ 
 
     footer {
         text-align: center;
