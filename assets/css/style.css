@@ -866,7 +866,7 @@ footer p {
     #cardRow > div {
         flex: 0 0 auto;
         width: 100%;
-        max-width: 100%;
+        max-width: 300px;
         padding: 0 10px; /* Adjust as needed */
     }
     .efficient-proof h1{
