@@ -25,9 +25,9 @@
                     <li><a href="">NFT</a></li>
                     <li><a href="">Msg</a></li>
                     <li><a href="">opBNB</a></li>
-                    <li class="dropdown2">
+                    <li class="dropdown">
                         <a href="#">Developers <img src="./assets/img/down-arrow.png" alt=""></a>
-                        <ul class="dropdown-content2">
+                        <ul class="dropdown-content">
                             <li><a href="#">
                                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                                         class="menu-item-icon" aria-hidden="true" style="width: 28px; height: 28px;"
@@ -134,9 +134,9 @@
                             <!-- Add more options as needed -->
                         </ul>
                     </li>
-                    <li class="dropdown2">
+                    <li class="dropdown">
                         <a href="#">Ecosystem <img src="./assets/img/down-arrow.png" alt=""></a>
-                        <ul class="dropdown-content2">
+                        <ul class="dropdown-content">
                             <li><a href="#">
                                     <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
                                         class="menu-item-icon" aria-hidden="true" style="width: 28px; height: 28px;"
@@ -973,7 +973,10 @@
         var dropdowns = document.querySelectorAll('.dropdown2');
 
         dropdowns.forEach(function (dropdown) {
-            dropdown.addEventListener('click', function () {
+            dropdown.addEventListener('click', function (event) {
+                // Prevent the default behavior of the link
+                event.preventDefault();
+
                 // Toggle the visibility of the dropdown content
                 var content = this.querySelector('.dropdown-content2');
                 content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';

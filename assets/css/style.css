@@ -752,9 +752,6 @@ footer p {
 .ant-dropdown{
     display: none;
 }
-.dropdown-content2 {
-    display: none !important;
-}
 
 
 
@@ -927,6 +924,8 @@ footer p {
         position: fixed!important;
         top: -100vh; /* Initially position off-screen */
         height: 100vh;
+        background: rgba(0, 0, 0, 0.3);
+
         overflow-y: auto;
         display: block; /* Display block initially */
         transition: top 0.7s ease-in-out;
@@ -961,15 +960,12 @@ footer p {
     }
     .mob-list ul{
         margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
         list-style: none;
         width: 100%;
         padding: 0px;
     }
     .mob-list ul li{
-        padding: 10px 0px;
+        padding: 20px 0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
 
@@ -982,6 +978,7 @@ footer p {
     text-decoration: none;
     padding-left: 5.33333vw;
     }
+   
 }
 
 @media screen and (max-width:568px) {
@@ -995,4 +992,7 @@ footer p {
         text-align: center;
     }
 
+}
+.dropdown-content2 {
+    display: none  ;
 }
