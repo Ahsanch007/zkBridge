@@ -745,6 +745,19 @@ footer p {
 }
 
 
+
+
+
+
+.ant-dropdown{
+    display: none;
+}
+.dropdown-content2 {
+    display: none !important;
+}
+
+
+
 @media screen and (max-width:992px) {
     nav {
         display: none;
@@ -887,6 +900,88 @@ footer p {
         display: none !important;
     }
 
+
+
+
+
+
+
+
+    .ant-dropdown{
+        /* display: block; */
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: #000000d9;
+        font-size: 14px;
+        font-variant: tabular-nums;
+        line-height: 1.5715;
+        list-style: none;
+        font-feature-settings: "tnum";
+        width: 100%;
+        display: none;
+    }
+    .mobile-menu-overlay {
+        pointer-events: none;
+        z-index: 99!important;
+        position: fixed!important;
+        top: -100vh; /* Initially position off-screen */
+        height: 100vh;
+        overflow-y: auto;
+        display: block; /* Display block initially */
+        transition: top 0.7s ease-in-out;
+    }
+    .mobile-menu-overlay.open {
+        top: 0; /* Move the menu to the top when open */
+    }
+    .ant-dropdown:before {
+        position: absolute;
+        top: -4px;
+        right: 0;
+        bottom: -4px;
+        left: -7px;
+        z-index: -9999;
+        opacity: .0001;
+        content: " ";
+    }
+    
+    .c-bXbWpx-iibwEMF-css {
+        pointer-events: auto;
+        height: 100vh;
+        margin-top: 19.2vw;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(14px);
+        z-index: 100;
+    }
+    .c-bXbWpx {
+        display: flex;
+        box-sizing: border-box;
+    }
+    .mob-list ul{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        list-style: none;
+        width: 100%;
+        padding: 0px;
+    }
+    .mob-list ul li{
+        padding: 10px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+
+    }
+    .mob-list ul li a{
+        font-size: 4.8vw;
+    font-weight: 400;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding-left: 5.33333vw;
+    }
 }
 
 @media screen and (max-width:568px) {
